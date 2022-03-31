@@ -15,25 +15,38 @@ $("table").on('click', '#obrisi', function() {
 })
 
 $("table").on('change', '#mjenjaj', function() {
-	if($(this).closest('tr').css("background-color")=="Red")
+	if($(this).is(":checked"))
 	{
-		$(this).closest('tr').css("background-color","blue");
+		$(this).closest('tr').css("background-color","red");
 	}
 	else 
 	{
-		$(this).closest('tr').css("background-color","red");
+		$(this).closest('tr').css("background-color","blue");
 	}
 
 })
 
 $("#4").on('keyup', function()
 {
-	var value = this.val();
+	var value = $(this).val();
 
     $("table tbody").find("tr").each(function(index) {
-        if (!index) return;
-        var id = $(this).find("td").first().text();
-        $(this).toggle(id.indexOf(value) !== -1);
+        var bool=false;
+        $(this).find("td").each(function()
+        {
+        	if ($(this).text().search(value)>=0)
+        	{
+        		bool=true;
+        	}
+        });
+        if(bool)
+      	{
+      		$(this).show();
+      	}
+      	else
+      	{
+      		$(this).hide();
+      	}
     });
 });
 
