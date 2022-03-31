@@ -5,8 +5,8 @@ function Gumb()
 	var sem=$("#2").val();
 	var ects=$("#3").val();
 
-	$("#tablica").append('<tr><th>'+ime+'</th><th>'+sem+'</th><th>'+ects+'</th><th><button id="obrisi" type="button">Obrisi</button></th>'+
-		'<th><input id="mjenjaj" type="checkbox"></th>'+'</tr>');
+	$("#tablica").append('<tr><td>'+ime+'</td><td>'+sem+'</td><td>'+ects+'</td><td><button id="obrisi" type="button">Obrisi</button></td>'+
+		'<td><input id="mjenjaj" type="checkbox"></td>'+'</tr>');
 	i++;
 }
 
@@ -28,7 +28,7 @@ $("table").on('change', '#mjenjaj', function() {
 
 $("#4").on('keyup', function()
 {
-	var value = $('#4').val();
+	var value = this.val();
 
     $("table tbody").find("tr").each(function(index) {
         if (!index) return;
