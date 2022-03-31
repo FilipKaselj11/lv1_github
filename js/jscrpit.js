@@ -1,8 +1,8 @@
 function Gumb()
 {
-	var ime=$('#1').Val();
-	var sem=($'#2').Val();
-	var ects=($'#3').Val();
+	var ime=$("#1").val();
+	var sem=$("#2").val();
+	var ects=$("#3").val();
 
-	('#tablica').append('<tr><th>'+ime+'</th><th>'+semestar+'</th><th>'+ests+'</th>tr>');
+	$("#tablica").append('<tr><th>'+ime+'</th><th>'+sem+'</th><th>'+ects+'</th>tr>');
 }
