@@ -1,4 +1,4 @@
-var i=1;
+
 function Gumb()
 {
 	var ime=$("#1").val();
@@ -7,7 +7,6 @@ function Gumb()
 
 	$("#tablica").append('<tr><td>'+ime+'</td><td>'+sem+'</td><td>'+ects+'</td><td><button id="obrisi" type="button">Obrisi</button></td>'+
 		'<td><input id="mjenjaj" type="checkbox"></td>'+'</tr>');
-	i++;
 }
 
 $("table").on('click', '#obrisi', function() {
