@@ -25,3 +25,15 @@ $("table").on('change', '#mjenjaj', function() {
 	}
 
 })
+
+$("#4").on('keyup', function()
+{
+	var value = $('#4').val();
+
+    $("table tbody").find("tr").each(function(index) {
+        if (!index) return;
+        var id = $(this).find("td").first().text();
+        $(this).toggle(id.indexOf(value) !== -1);
+    });
+});
+
