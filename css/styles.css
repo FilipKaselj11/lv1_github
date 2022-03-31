@@ -1,4 +1,10 @@
 tbody
 {
 	background-color: blue;
+	width: 200px;
+	border: 0.5px, solid;	
+}
+td
+{
+	text-align: center;
 }
